@@ -7,29 +7,112 @@ body {
 #section {
     border: 2px solid grey;
     padding: 10px;
+    margin-bottom: 20px;
 }
 
-#section p {
-    display: inline-block;
+.color {
     padding: 20px;
     width: 150px;
     margin: 10px;
+}
+
+.colorContainer {
+    display: grid;
+    grid-template-columns: 215px 150px;
+    grid-template-rows: auto;
+    grid-template-areas: 
+    " . . "
+    "ttl1 ttl2"
+    "prim sec0"
+    " . sec1"
+    " . sec2"
+    " . sec3"
+    " . sec4"
+    " . sec5";
 }
 
 p.color {
     font-family: Roboto, Helvetica, Arial, sans-serif; 
 }
 
+#title1 {
+    grid-area: ttl1;
+    text-align: center;
+    font-weight: 500;
+    font-size: 1.3rem;
+}
+
+#title2 {
+    grid-area: ttl2;
+    text-align: center;
+    font-weight: 500;
+    font-size: 1.3rem;
+}
+
 #vividOrange {
     border: 2px solid #fc4b06;
     background-color: #fc4b06;
     color: black;
+    grid-area: prim;
 }
 
 /* #fc4b06 */
+
+#black {
+    border: 2px solid #000000;
+    background-color: #000000;
+    color: white;
+    grid-area: sec0;
+}
 
 #darkGray {
     border: 2px solid #667986;
     background-color: #667986;
     color: white;
+    grid-area: sec1;
+}
+
+#gray {
+    border: 2px solid #a9b8c2;
+    background-color: #a9b8c2;
+    color: black;
+    grid-area: sec2;
+}
+
+#lighterGray {
+    border: 2px solid #e2ecf4;
+    background-color: #e2ecf4;
+    color: black;
+    grid-area: sec3;
+}
+
+#lightestGray {
+    border: 2px solid #f9fcfd;
+    background-color: #f9fcfd;
+    color: black;
+    grid-area: sec4;
+}
+
+#white {
+    border: 2px solid #ffffff;
+    background-color: #ffffff;
+    color: black;
+    grid-area: sec5;
+}
+
+.fontSection1 {
+    font-family: 'Roboto';
+    font-weight: 700;
+}
+
+.fontSection2 {
+    font-family: Helvetica;
+}
+
+.fontSection3 {
+    font-family: Arial;
+}
+
+.fontSection4 {
+    font-family: sans-serif;
 }
